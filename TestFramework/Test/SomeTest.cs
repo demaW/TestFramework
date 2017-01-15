@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using TestFramework.Framework.Bussiness.CalculatorBO;
 using TestFramework.Framework.Core;
 
 namespace TestFramework.Test
@@ -22,7 +23,16 @@ namespace TestFramework.Test
         [Test]
         public void OpenTest()
         {
+            Thread.Sleep(2000);
             
+        }
+
+        [Test]
+        public void CalculateTest()
+        {
+            StandartCalculatorBO scBO = new StandartCalculatorBO();
+            double result = scBO.Add(58.3, 3.3);
+            Assert.AreEqual(61.6, result);
         }
 
         [TearDown]

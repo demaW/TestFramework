@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Automation;
 using TestFramework.Framework.Windows;
 
 namespace TestFramework.Framework.Elements
 {
     class Button : BaseElement
     {
-        public Button(BaseWindow baseWindow, string automationId) : base(baseWindow, automationId)
+        public Button(BaseWindow baseWindow, AutomationProperty autProperty, string automationPropVal) : base(baseWindow, autProperty, automationPropVal)
         {
         }
 
